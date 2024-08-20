@@ -6,38 +6,23 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^5",
+    "@sap/cds": "^8",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "cors": "^2.8.5",
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^5.0.2"
+    "@cap-js/cds-types": "^0.6",
+    "@cap-js/sqlite": "^1",
+    "cds-swagger-ui-express": "^0.9.0"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds-serve"
   },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "es2020": true,
-      "node": true,
-      "jest": true,
-      "mocha": true
-    },
-    "globals": {
-      "SELECT": true,
-      "INSERT": true,
-      "UPDATE": true,
-      "DELETE": true,
-      "CREATE": true,
-      "DROP": true,
-      "CDL": true,
-      "CQL": true,
-      "CXL": true,
-      "cds": true
-    },
-    "rules": {
-      "no-console": "off",
-      "require-atomic-updates": "off"
-    }
+  "swagger": {
+    "basePath": "/$api-docs",
+    "apiPath": "",
+    "diagram": true,
+    "odataVersion": ""
   }
 }
